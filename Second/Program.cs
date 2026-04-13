@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace PracticeC_
 {
@@ -6,8 +6,6 @@ namespace PracticeC_
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("=== ТЕСТИРОВАНИЕ КЛАССА LineSegment ===\n");
-
             // Тест конструкторов
             Console.WriteLine("1. ТЕСТ КОНСТРУКТОРОВ:");
             LineSegment ls1 = new LineSegment();
@@ -67,9 +65,6 @@ namespace PracticeC_
             Console.Write("\nВведите число для проверки попадания в отрезок по X: ");
             double checkValue = ReadDouble("Число: ");
             Console.WriteLine($"Число {checkValue} попадает в отрезок? {manualLs.Contains(checkValue)}");
-
-            Console.WriteLine("\nНажмите любую клавишу для выхода...");
-            Console.ReadKey();
         }
 
         private static double ReadDouble(string prompt)
