@@ -8,42 +8,42 @@ namespace PracticeC_
         {
             // Тест конструкторов базового класса
             TripleNumber tn1 = new TripleNumber();
-            Console.WriteLine($"tn1 (по умолчанию): {tn1}");
+            Console.WriteLine($"tn1 (по умолчанию): {tn1.ToString()}");
 
             TripleNumber tn2 = new TripleNumber(123, 456, -789);
-            Console.WriteLine($"tn2: {tn2}");
+            Console.WriteLine($"tn2: {tn2.ToString()}");
             Console.WriteLine($"Макс. последняя цифра в tn2: {tn2.MaxLastDigit()}");
 
             TripleNumber tn3 = new TripleNumber(tn2);
-            Console.WriteLine($"tn3 (копия tn2): {tn3}");
+            Console.WriteLine($"tn3 (копия tn2): {tn3.ToString()}");
 
             // Тест с корректными значениями
             TriangleSides tr1 = new TriangleSides(3, 4, 5);
-            Console.WriteLine(tr1);
+            Console.WriteLine(tr1.ToString());
             Console.WriteLine($"Периметр: {tr1.GetPerimeter()}");
             Console.WriteLine($"Можно ли построить: {tr1.IsValidTriangle()}");
 
             // Тест с некорректными значениями (конструктор исправит на 5,5,5)
             Console.WriteLine("\nСоздание с отрицательной стороной");
             TriangleSides tr2 = new TriangleSides(-2, 4, 5);
-            Console.WriteLine(tr2);
+            Console.WriteLine(tr2.ToString());
 
             Console.WriteLine("\nЗамена параметра A на 1");
             tr2.A = 1;
-            Console.WriteLine($"После изменения: {tr2}");
+            Console.WriteLine($"После изменения: {tr2.ToString()}");
 
             Console.WriteLine("\nЗамена параметра A на -1");
             tr2.A = -1;
-            Console.WriteLine($"После изменения: {tr2}");
+            Console.WriteLine($"После изменения: {tr2.ToString()}");
 
             // Ручной ввод для базового класса
             TripleNumber handInpMain = InputTripleNumber();
-            Console.WriteLine($"\nСоздан объект: {handInpMain}");
+            Console.WriteLine($"\nСоздан объект: {handInpMain.ToString()}");
             Console.WriteLine($"Максимальная последняя цифра: {handInpMain.MaxLastDigit()}");
 
             // Ручной ввод для треугольника
             TriangleSides handInpTr = InputTriangleSides();
-            Console.WriteLine($"\n{handInpTr}");
+            Console.WriteLine($"\n{handInpTr.ToString()}");
 
             if (handInpTr.IsValidTriangle())
             {
