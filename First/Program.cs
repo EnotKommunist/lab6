@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace PracticeC_
 {
@@ -49,9 +49,6 @@ namespace PracticeC_
             {
                 Console.WriteLine($"Периметр: {handInpTr.GetPerimeter()}");
             }
-
-            Console.WriteLine("\nНажмите любую клавишу для выхода...");
-            Console.ReadKey();
         }
 
         private static int ReadInt(string prompt)
